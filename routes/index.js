@@ -2,6 +2,10 @@ const express = require('express')
 const actions = require('./../src/actions')
 const router = express.Router();
 
+router.get('/', (req,res) => {
+    res.send("Dashboard")
+})
+
 router.post('/login', actions.authenticate)
 
 router.post('/addUser', actions.addNew)
