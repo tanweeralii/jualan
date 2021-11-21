@@ -17,5 +17,6 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(routes)
-
+app.use(passport.initialize())
+require('./src/passport')(passport)
 app.listen(PORT, console.log(`Server running in: ${process.env.NODE_ENV} mode on port: ${PORT}`));

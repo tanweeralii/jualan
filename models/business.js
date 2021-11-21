@@ -13,7 +13,7 @@ var businessSchema = new Schema({
         required: "Full Name Required"
     },
     email: {
-        type: string,
+        type: String,
         unique: true,
         lowercase: true, 
         required: "Please Enter Email",
@@ -21,41 +21,41 @@ var businessSchema = new Schema({
         validate: [validator.isEmail, "Enter correct email Id"]
     },
     address: {
-        type: string, 
+        type: String, 
         trim: true, 
         required: true
     },
     phone: {
-        type: string,
+        type: String,
         trim: true,
         required: true
     },
     tokopedia: {
-        type: int,
+        type: Number,
         required: true
     },
     shopee: {
-        type: int,
+        type: Number,
         required: true
     },
     goshop: {
-        type: int,
+        type: Number,
         required: true
     },
     grabmarket: {
-        type: int,
+        type: Number,
         required: true
     },
     blibli: {
-        type: int,
+        type: Number,
         required: true
     },
     bukalapak: {
-        type: int,
+        type: Number,
         required: true
     },
     image: {
-        type: string,
+        type: String,
         required: true
     }
 })

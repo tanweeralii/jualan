@@ -14,23 +14,23 @@ var productSchema = new Schema({
         required: "Product Name Required"
     },
     category: {
-        type: string,
+        type: String,
         unique: true, 
         required: "Please Enter Email",
         trim: true,
     },
     price: {
-        type: int,
+        type: Number,
         trim: true,
         required: "Price Required"
     },
     stocks: {
-        type: int,
+        type: Number,
         trim: true,
         required: "Product Available Stocks Required"
     },
     minorder: {
-        type: int,
+        type: Number,
         trim: true,
         required: "Min Order Required"
     },

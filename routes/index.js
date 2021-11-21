@@ -1,36 +1,22 @@
 const express = require('express')
+const actions = require('./../src/actions')
 const router = express.Router();
 
-router.post('/login', (req,res) => {
-    res.json({
-        message: "Sucess"
-    })
-})
+router.post('/login', actions.authenticate)
 
-router.post('/addUser', (req,res) => {
-    res.json({
-        message: "Sucess"
-    })
-})
+router.post('/addUser', actions.addNew)
 
-router.post('/otp', (req,res) => {
-    res.json({
-        message: "Sucess"
-    })
-})
+router.get('/profile', actions.getProfile)
 
-router.post('/:id/addBusiness', (req,res) => {
-    res.json({
-        message: "Sucess"
-    })
-})
+router.post('/addBusiness', actions.addBusiness)
 
-router.post('/:id/addProduct', (req,res) => {
-    res.json({
-        message: "Sucess"
-    })
-})
+router.post('/addProduct', actions.addProduct)
 
+router.post('/otp', actions.verifyOTP)
+
+router.put('/updateBusiness', actions.UpdateBusiness)
+
+/*
 router.post('/:id/updateProfile', (req,res) => {
     res.json({
         message: "Sucess"
@@ -42,11 +28,6 @@ router.post('/:id/updateProduct', (req,res) => {
         message: "Sucess"
     })
 })
-
-router.post('/:id/updateBusiness', (req,res) => {
-    res.json({
-        message: "Sucess"
-    })
-})
+*/
 
 module.exports = router

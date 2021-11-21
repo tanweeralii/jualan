@@ -14,7 +14,7 @@ var verificationSchema = new Schema({
         required: "Full Name Required"
     },
     address: {
-        type: string,
+        type: String,
         unique: true,
         lowercase: true, 
         required: "Please Enter Your Address",
@@ -30,11 +30,11 @@ var verificationSchema = new Schema({
         required: "Phone Number Required"
     },
     idPic: {
-        type: string,
+        type: String,
         required: true
     },
     PicWithId: {
-        type: string,
+        type: String,
         required: true
     }    
 })
