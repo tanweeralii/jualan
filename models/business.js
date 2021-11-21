@@ -53,11 +53,11 @@ var businessSchema = new Schema({
     bukalapak: {
         type: Number,
         required: true
-    },
-    image: {
+    }
+    /*image: {
         type: String,
         required: true
-    }
+    }*/
 })
 
 module.exports = mongoose.model('Business', businessSchema)

@@ -4,6 +4,8 @@ const promisify = require('es6-promisify')
 const transport = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
     port: process.env.MAIL_PORT,
+    secure: true,
+    service: 'Gmail',
     auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS
@@ -13,8 +15,8 @@ const transport = nodemailer.createTransport({
 var send = async(options) => {
     const mailOptions = {
         from: 'Jualan <jualan@gmail.com>',
-        to: options.user.email,
-        subject: options.subject,
+        to: options.email,
+        subject: "Your OTP is "+ options.otp,
         text: options.otp
     };
     const sendMail = promisify(transport.sendMail, transport);

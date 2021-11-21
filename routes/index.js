@@ -6,13 +6,21 @@ router.post('/login', actions.authenticate)
 
 router.post('/addUser', actions.addNew)
 
+router.post('/verify', actions.verify)
+
+router.post('/resend', actions.resend)
+
 router.get('/profile', actions.getProfile)
+
+router.get('/business', actions.getBusiness)
+
+router.get('/verification', actions.getVerification)
+
+router.get('/product', actions.getProduct)
 
 router.post('/addBusiness', actions.addBusiness)
 
 router.post('/addProduct', actions.addProduct)
-
-router.post('/otp', actions.verifyOTP)
 
 router.put('/updateBusiness', actions.UpdateBusiness)
 

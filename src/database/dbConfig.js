@@ -1,4 +1,4 @@
 module.exports = {
     secret: 'garuda',
-    database: ''
+    database: 'mongodb+srv://tanweerali:AGMVhuSRdXVzRn43@cluster0.iu0tz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 }
