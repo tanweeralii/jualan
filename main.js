@@ -1,11 +1,10 @@
-require("dotenv").config({path: './src/env/.env'});
 const cors = require("cors");
 const express = require('express');
 const connectDB = require('./src/database/db')
 const bodyParser = require('body-parser')
 const passport = require('passport')
 const morgan  = require('morgan')
-const PORT = process.env.APP_PORT || 3000;
+const PORT = process.env.PORT || 3000
 const routes = require('./routes/index')
 const app = express();
 
